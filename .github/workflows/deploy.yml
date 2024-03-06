@@ -30,4 +30,4 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "ibg-news"
-          # entrypoint: "./main.ts" # 📝 Update the entrypoint if necessary
+          entrypoint: "./main.ts"
