@@ -1,5 +1,3 @@
-/// <reference lib="deno.unstable" />
-
 const BASE_URL = "https://hacker-news.firebaseio.com/v0/";
 
 const kv = await Deno.openKv();

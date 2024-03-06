@@ -1,3 +1,5 @@
+// Deno kv requires unstable flag
+/// <reference lib="deno.unstable" />
 /// <reference no-default-lib="true" />
 /// <reference lib="dom" />
 /// <reference lib="dom.iterable" />
