@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+p {
+  @apply my-2;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
