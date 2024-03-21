@@ -1,6 +1,8 @@
 {
   "editor.formatOnSave": true,
 
+  "prettier.printWidth": 128,
+
   "files.associations": {
     "*.css": "tailwindcss"
   }
