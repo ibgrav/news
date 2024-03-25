@@ -1,24 +1,14 @@
 import "./main.css";
 
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home } from "./pages/home";
+import { App } from "./app";
+import { render } from "preact";
+import { ids } from "./signals";
+import { getTopStories } from "./lib/hackernews";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-    errorElement: (
-      <div className="h-full w-full flex justify-center items-center">
-        <h1>404</h1>
-      </div>
-    ),
-  },
-]);
+main();
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
-);
+async function main() {
+  ids.value = await getTopStories();
+
+  render(<App />, document.getElementById("root") as HTMLDivElement);
+}

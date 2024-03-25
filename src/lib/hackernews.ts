@@ -32,6 +32,7 @@ export namespace HN {
     score: number;
     kids: number[];
     descendants: number;
+    text?: string;
   };
 
   export type Comment = Item<"comment"> & {

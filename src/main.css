@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 html,
-body {
+body,
+#root {
   @apply w-full h-full flex justify-center items-center;
 }
 
@@ -11,15 +12,11 @@ a {
   @apply hover:underline;
 }
 
-@keyframe fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+p {
+  @apply mt-2;
 }
 
-.fadein {
-  animation: fadein 0.5s forwards;
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
